@@ -1,0 +1,29 @@
+body{
+	font-family: arial;
+}
+#Urls, #outdiv, #template{
+	width: max(500px);
+	outline : solid black 3px;
+	padding-right : 5px;
+	padding-left : 5px;
+	padding-bottom : 5px;
+
+}
+textarea{
+	width: 95%;
+	height:10rem;
+}
+
+/*max(500px)*/
+div .title {
+	position: relative;
+	top: -1.05em; left: 00px;
+	color:red;
+}
+h2.title{
+	font-size: 1.2rem;
+}
+#outdiv, #template{
+	outline : solid black 3px;
+	margin-top: 32px;
+}
