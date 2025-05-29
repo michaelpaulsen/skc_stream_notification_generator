@@ -3,11 +3,11 @@ let url_parse = ( match) => {
 	return !!$(match).val()?$(match).val():match;
 }
 function template_parse() {
-	let pre_mode =  $("#tmpl").val().toLowerCase();
+	let pre_mode =  $("#tmpl").val();
 
 	pre_mode = pre_mode.replaceAll(/\:(.*?)\:/gm,
 		(match, ...reg_info)=> {
-			let emoji_name = reg_info[0];
+			let emoji_name = reg_info[0].toLowerCase();
 			let emoji_symbol = emoji[emoji_name];
 			if(!emoji_symbol) return match;
 			return  emoji_symbol;
@@ -28,7 +28,6 @@ function template_parse() {
 		}
 	);
 
-	pre_mode = pre_mode.replace(/\si\s/gm, " I ");
 	let non_discord = pre_mode.replace(modereg, "every one").trim();
 	let discord = pre_mode.replace(modereg, "@here").trim();
 
