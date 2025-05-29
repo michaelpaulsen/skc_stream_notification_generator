@@ -17,16 +17,8 @@ function template_parse() {
 	pre_mode =pre_mode.replace(urlreg, (match) => {
 		return url_parse(match);
 	});
-	pre_mode = pre_mode.replace(gamereg,
-		()=> {
-			return  $("#game").val();
-		}
-	);
-	pre_mode = pre_mode.replace(ep_num,
-		()=> {
-			return  $("#in_ep_number").val();
-		}
-	);
+	pre_mode = pre_mode.replace(gamereg,()=> {return $("#game").val();});
+	pre_mode = pre_mode.replace(ep_num,()=> {return $("#in_ep_number").val();});
 
 	let non_discord = pre_mode.replace(modereg, "every one").trim();
 	let discord = pre_mode.replace(modereg, "@here").trim();
