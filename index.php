@@ -13,9 +13,7 @@
 	<h1> skeleton_craft's notification generator</h1>
 	<div id = "Urls">
 		<h2 class = "title"> URLS </h2>
-		<p> <label for="url1">Stream URL</label><input type = "text" class ="url change" id = "url1" value = "https://www.twitch.tv/skeleton_craft_gaming"/></p>
-		<!-- TODO(skc): support adding more than one url! -->
-		<!--<input type = "button" id = "addURL" value = "+ url" />-->
+		<input type = "button" id = "addURL" value = "+ url" />
 	</div>
 	<div id = "template">
 		<h2 class = "title"> template input </h2>
