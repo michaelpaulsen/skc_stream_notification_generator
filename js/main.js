@@ -3,7 +3,7 @@ function update(){
 	let game = $("#game").val();
 	let {non_discord, discord}  = template_parse(urls,game);
 	set_copy_value("#discord_copy", discord);
-	set_copy_value("twitter_copy", non_discord);
+	set_copy_value("#twitter_copy", non_discord);
 
 
 	//$("#discord_copy").attr("copy_value", discord)
