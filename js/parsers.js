@@ -1,9 +1,6 @@
 
-let url_parse = (urls, match) => {
-
-	let ret = $(match).val();
-	if (!ret) return "";
-	return ret;
+let url_parse = ( match) => {
+	return !!$(match).val()?$(match).val():match;
 }
 function template_parse() {
 	let pre_mode =  $("#tmpl").val().toLowerCase();
@@ -18,7 +15,7 @@ function template_parse() {
 	);
 
 	pre_mode =pre_mode.replace(urlreg, (match) => {
-		return url_parse(urls, match);
+		return url_parse(match);
 	});
 	pre_mode = pre_mode.replace(gamereg,
 		()=> {

@@ -1,6 +1,3 @@
-let url_count = $(".url").length;
-let urls = {};
-
 let emoji  = {
     "live" : '🔴',
     "smily1" : '☺',
