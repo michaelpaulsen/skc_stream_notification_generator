@@ -10,11 +10,11 @@ function update(){
 	$("#twitter_out").html(replace_new_lines(non_discord));
 }
 
-add_url_input("https://www.twitch.tv/skeleton_craft_gaming")
+add_url_input("")
 update();
 
 
-$(".change").on("change", ()=>{
+$(".change").on("input", ()=>{
  update();
 });
 
