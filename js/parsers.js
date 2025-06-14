@@ -1,11 +1,12 @@
-
+let colon_string = "!!colon!!";
+let colon_regex = new RegExp(colon_string,"gm");
 let url_parse = ( match) => {
 	return !!$(match).val()?$(match).val():match;
 }
 function template_parse() {
 	let pre_mode =  $("#tmpl").val();
-
-	pre_mode = pre_mode.replaceAll(/\:(.*?)\:/gm,
+	pre_mode = pre_mode.replaceAll(/\\:/gm,colon_string );
+	pre_mode = pre_mode.replaceAll(/:(.*?):/gm,
 		(match, ...reg_info)=> {
 			let emoji_name = reg_info[0].toLowerCase();
 			let emoji_symbol = emoji[emoji_name];
@@ -13,7 +14,7 @@ function template_parse() {
 			return  emoji_symbol;
 		}
 	);
-
+	pre_mode = pre_mode.replaceAll(colon_regex, ":").trim();
 	pre_mode =pre_mode.replace(urlreg, (match) => {
 		return url_parse(match);
 	});
