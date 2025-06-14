@@ -34,6 +34,20 @@ btn_toggle_keys.on("click", ()=>{
 	}
 });
 
+//change the template when the user selects a new template.
+let opt_template_preset = $("#template_preset");
+opt_template_preset.on("input",()=>{
+	let mode = 	opt_template_preset.val();
+	let html = `hey #mode`;
+	if(mode == "new_video") {
+		html += `\n:video: new video:video::\n#title\n`
+	}
+	if(mode == "stream"){
+		html = ` :live: ${html} I am live!\n#title #episode_number `;
+	}
+	html += ` \n#url1`;
+	$("#tmpl").html(html);
+	update();
 });
 //Create the key for the emoji
 let key = $("#emoji_key")

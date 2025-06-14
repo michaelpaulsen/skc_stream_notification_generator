@@ -21,16 +21,18 @@
 			<label for="game"> stream title : </label>
 			<input id="game" class="change" type="text"/>
 		</p>
+		<label for="template_preset">template presets :</label>
+		<select id="template_preset">
+		<option value = "stream"> stream alert</option>
+		<option value = "new_video"> new video</option>
+		</select>
 		<p>
 			<label for="in_ep_number">episode number: </label>
 			<input type = "number" class = "change" value ="296" id ="in_ep_number"/>
 		</p>
 		<div id="template_section">
 			<label for = "tmpl"> template : </label>
-			<textarea class="change" id="tmpl">:live: hey #mode I am live
-skeleshow #episode_number #title
-#url1 :live:
-			</textarea>
+			<textarea class="change" id="tmpl"></textarea>
 			<button id ="key_hide_btn">hide keys</button>
 			<p id = "emoji_key">supprted emoji and their keys<br></p>
 		</div>
