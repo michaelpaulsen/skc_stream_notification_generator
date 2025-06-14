@@ -10,4 +10,5 @@ let emoji  = {
     "clubs" : "♣",
     "spades" : "♠",
     "dice" : "🎲",
+    "video" : "📹"
 }
