@@ -7,8 +7,7 @@ let Command = (...n) => {
 	return new RegExp(regstr, "gm");
 }
 
-let urlreg =  Command("(url\\d*)");
-let modereg =  Command("mode");
-let gamereg =  Command("title");
-let ep_num =  Command("episode_number");
-		
+let urlreg  = Command("(url\\d*)");
+let modereg = Command("mode");
+let gamereg = Command("title");
+let ep_num  = Command("episode_number");
