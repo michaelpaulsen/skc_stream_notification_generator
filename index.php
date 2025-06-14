@@ -25,8 +25,8 @@
 			<label for="in_ep_number">episode number: </label>
 			<input type = "number" class = "change" value ="296" id ="in_ep_number"/>
 		</p>
-		<label for = "tmpl"> template : </label>
 		<div id="template_section">
+			<label for = "tmpl"> template : </label>
 			<textarea class="change" id="tmpl">:live: hey #mode I am live
 skeleshow #episode_number #title
 #url1 :live:
