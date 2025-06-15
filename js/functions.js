@@ -46,9 +46,6 @@ function add_url_input(defualt_val = ""){
     $input.attr('id', id).attr("class", 'change');
 
     $input.val(defualt_val);
-
-    $input.on("change", ()=> {update()});
-
     $("#addURL").before($(`<p>`).append($label).append($input));
     ++url_count+1;
 };
