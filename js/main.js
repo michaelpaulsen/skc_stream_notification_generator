@@ -38,23 +38,8 @@ btn_toggle_keys.on("click", ()=>{
 let opt_template_preset = $("#template_preset");
 opt_template_preset.on("input",()=>{
 	let mode = 	opt_template_preset.val();
-	let html ="";
-	if(mode == "new_video") {
-		html  = `hey #mode\n`
-		html += `:video: new video:video::`
-		html +=  `\n#title`;
-		html += `#url1\n`;
 
-	}
-	if(mode == "stream"){
-
-		html  = `:live: hey #mode\n`
-		html += `I am live\n`
-		html += `#title #episode_number\n`;
-		html += `#url1\n:live:\n`;
-	}
-	html += `you should sub to my YT : #url2`;
-	$("#tmpl").val(html);
+	template_input.val(create_template_string(mode));
 	update();
 });
 //Create the key for the emoji

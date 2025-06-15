@@ -1,3 +1,27 @@
+
+function make_templated_template(mode) {
+    let html ="";
+    console.log(mode);
+    if(mode == "new_video") {
+        html  = `hey #mode\n`
+        html += `:video: new video:video::`
+        html +=  `\n#title`;
+        html += `#url1\n`;
+
+    }else if(mode == "stream"){
+
+        html  = `:live: hey #mode\n`
+        html += `I am live\n`
+        html += `#title #episode_number\n`;
+        html += `#url1\n:live:\n`;
+    }else{
+        let error_string = `ERROR: mode : ${mode}, isn't valid`;
+        console.error(error_string);
+        return error_string;
+    }
+     return `${html}you should sub to my YT : #url2`;
+
+}
 function replace_new_lines(str){
     return str.replace(/\n/gm,"<br>");
 }
