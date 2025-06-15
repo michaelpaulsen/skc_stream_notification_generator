@@ -25,6 +25,15 @@ function make_templated_template(mode) {
 function replace_new_lines(str){
     return str.replace(/\n/gm,"<br>");
 }
+function update(){
+    let game = $("#game").val();
+    let {non_discord, discord}  = template_parse(game);
+    set_copy_value("#discord_copy", discord);
+    set_copy_value("#twitter_copy", non_discord);
+    $("#discord_out").html(replace_new_lines(discord));
+    $("#twitter_out").html(replace_new_lines(non_discord));
+}
+
 let url_count = 0;
 
 function add_url_input(defualt_val = ""){
