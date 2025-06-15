@@ -1,5 +1,5 @@
 
-function make_templated_template(mode) {
+function create_template_string(mode) {
     let html ="";
     console.log(mode);
     if(mode == "new_video") {
@@ -40,11 +40,8 @@ function add_url_input(defualt_val = ""){
     let id = `url${url_count+1}`;
     let $label = $(`<label>`);
     let $input = $(`<input>`);
-
     $label.attr('for', id).append(`Url ${url_count+1} :`);
-
     $input.attr('id', id).attr("class", 'change');
-
     $input.val(defualt_val);
     $("#addURL").before($(`<p>`).append($label).append($input));
     ++url_count+1;

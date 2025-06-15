@@ -1,5 +1,3 @@
-add_url_input("")
-update();
 
 
 //show and hide the key
@@ -18,6 +16,7 @@ btn_toggle_keys.on("click", ()=>{
 
 //change the template when the user selects a new template.
 let opt_template_preset = $("#template_preset");
+let template_input = $("#tmpl");
 opt_template_preset.on("input",()=>{
 	let mode = 	opt_template_preset.val();
 	template_input.val(create_template_string(mode));
@@ -32,3 +31,9 @@ let key = $("#emoji_key")
 for(let x in emoji) {
 	key.append(`:${x}:  => ${emoji[x]}<br>`)
 }
+
+
+add_url_input("")
+add_url_input("https://www.youtube.com/@skeleton_craftGaming")
+template_input.html(make_templated_template("stream"));
+update();
